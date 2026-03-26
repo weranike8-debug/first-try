@@ -374,10 +374,7 @@ margin:auto;
     </a>
   </div>
 </div>
-</div>
-</div>
 
-</div>
 <footer id="footer">
     <div class="footer-links">
         <a href="#home">Homepage</a>
