@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+#about-section {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 40px;
+    margin: 70px auto;
+    max-width: 1200px;
+}
+
+#about-section p {
+    flex: 2;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+}
+
+#player {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#player iframe {
+    width: 100%;
+    max-width: 420px;
+    height: 700px;
+}
+/* Recent Work Section */
+#recent-work {
+    max-width: 1200px;
+    margin: 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+#recent-work h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.work-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Stacks on very small screens */
+}
+
+.work-item {
+    flex: 1;               /* Each takes equal space */
+    max-width: 300px;      /* Fixed width for uniform size */
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s, box-shadow 0.3s;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    padding-bottom: 10px;
+}
+
+.work-item img {
+    width: 100%;
+    height: 200px;         /* All images same height */
+    object-fit: cover;     /* Maintains aspect ratio and crops */
+    display: block;
+    border-bottom: 1px solid #ddd;
+    transition: transform 0.3s;
+}
+
+.work-item h3 {
+    margin: 15px 0 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+}
+
+.work-item p {
+    font-size: 14px;
+    margin: 0 10px 10px 10px;
+    line-height: 1.4;
+}
+
+/* Hover effect */
+.work-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+}
+
+.work-item:hover img {
+    transform: scale(1.05);
+}
+body{
+font-family:"Poppins", sans-serif;
+}
+
+.wrapper{
+position:fixed;
+left:0;
+top:120px;
+height:calc(100vh - 120px);
+width:70px;
+background:#68A396;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+gap:30px;
+}
+
+.wrapper .icon{
+background:#ffffff;
+border-radius:25%;
+width:50px;
+height:50px;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:50px;
+cursor:pointer;
+transition:all 0.3s ease;
+}
+
+.wrapper .icon:hover{
+transform:scale(1.2);
+}
+
+.wrapper .icon a{
+color:inherit;
+text-decoration:none;
+}
+
+/* ANIMACJA HOVER */
+
+.wrapper .icon:hover{
+transform:scale(1.2);
+box-shadow:0 20px 30px rgba(0,0,0,0.3);
+}
+
+/* KOLORY */
+
+.wrapper .linkedin:hover{
+background:#0077b5;
+color:white;
+}
+
+.wrapper .spotify:hover{
+background:#1db954;
+color:white;
+}
+.wrapper .instagram:hover{
+background:#e1306c;
+color:white;
+}
+
+.wrapper .youtube:hover{
+background:#ff0000;
+color:white;
+}
+
+h1{
+font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size:48px;
+text-align:center;
+margin-top:50px;
+}
+
+p{
+font-family:Arial, sans-serif;
+margin:0px;
+}
+
+.column{
+width:10%;
+padding:10px;
+float:left;
+}
+
+.row:after{
+content:"";
+display:table;
+clear:both;
+}
+
+ul{
+list-style-type:none;
+margin:0;
+padding:0;
+overflow:hidden;
+background-color:#3a5c58;
+}
+
+ul li{
+float:left;
+}
+
+ul li a{
+display:block;
+color:white;
+text-align:center;
+padding:14px 16px;
+text-decoration:none;
+}
+
+ul li a:hover{
+background-color:#111;
+}
+
+#content{
+display:block;
+width:1300px;
+margin:auto;
+}
+<div id="recent-work">
+  <h2>Recent Work</h2>
+  <div class="work-container">
+    <a href="https://example.com/project1" class="work-item" target="_blank">
+      <img src="https://via.placeholder.com/350x200" alt="Project 1">
+      <h3>Project 1</h3>
+      <p>A short description of Project 1 goes here.</p>
+    </a>
+
+    <a href="https://example.com/project2" class="work-item" target="_blank">
+      <img src="https://via.placeholder.com/350x200" alt="Project 2">
+      <h3>Project 2</h3>
+      <p>A short description of Project 2 goes here.</p>
+    </a>
+
+    <a href="https://example.com/project3" class="work-item" target="_blank">
+      <img src="https://via.placeholder.com/350x200" alt="Project 3">
+      <h3>Project 3</h3>
+      <p>A short description of Project 3 goes here.</p>
+    </a>
+  </div>
+</div>
+
+#footer {
+    width: 100%;
+    background-color: #1a3d2f; /* dark green */
+    color: #cfcfcf;
+    padding: 20px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+
+    display: flex;             /* use flexbox for full centering */
+    flex-direction: column;    /* stack links and copyright */
+    align-items: center;       /* center horizontally */
+    justify-content: center;   /* center vertically if needed */
+    text-align: center;
+}
+#footer .footer-links {
+    display: flex;
+    gap: 50px; /* spacing between links */
+    margin-bottom: 10px; /* space above copyright */
+}
+
+#footer a {
+    color: #69ebb7;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+#footer a:hover {
+    color: #68A396;
+}
+
+#footer p {
+    margin: 0;
+    font-size: 14px;
+    color: #cfcfcf;
+}
+</style>
+</head>
+
+<body>
+
+<div id="header" style="background-color:lightblue;">
+<h2>Weronika</h2>
+</div>
+
+<div id="menu">
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#news">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+<li><a href="#about">About</a></li>
+</ul>
+</div>
+
+
+<div class="wrapper">
+
+<div class="icon linkedin">
+<a href="https://www.linkedin.com/in/weronika-wo%C5%BAniak-79a496294?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">
+<i class="fa fa-linkedin"></i>
+</a>
+</div>
+
+<div class="icon spotify">
+<a href="https://open.spotify.com/show/5Oa10m3h7bjGlF942XMFh2?si=4f0d193b55ac4e3a" target="_blank">
+<i class="fa fa-spotify"></i>
+</a>
+</div>
+
+<div class="icon instagram">
+<a href="https://www.instagram.com/wera_nika_media?igsh=Y2NzeGdmNnk2Ympr" target="_blank">
+<i class="fa fa-instagram"></i>
+</a>
+</div>
+
+<div class="icon youtube">
+<a href="https://youtube.com/@thefilmmakers24?si=8UhyRXcSkJxjJ9Yf" target="_blank">
+<i class="fa fa-youtube-play"></i>
+</a>
+</div>
+
+</div>
+
+</div>
+
+<div id="content">
+
+<h1>Wera Nika Media</h1>
+
+<div id="about-section">
+    <p style="font-size: 30px">
+        My name is Weronika. I am a TV and media production student. I have worked on many projects, focusing on props, audio, and video production. Personally, I like to crochet and play video games. Here are some recent examples of my work:
+    </p>
+
+    <div id="player">
+        <iframe src="https://www.youtube.com/embed/jduQfqCmduw" 
+                title="YouTube video player" 
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+    </div>
+</div>
+<div id="recent-work">
+  <h2>Recent Work</h2>
+  <div class="work-container">
+    <a href="https://open.spotify.com/user/31bugcrtzie6wuivgnun5xnjy4c4?si=dVPVocSDQ02gl5PfvxLWoQ" class="work-item" target="_blank">
+      <img src="1000042311.jpg" alt="The Vodcast">
+      <h3>The Vodcast</h3>
+      <p>A podcast from students by students.</p>
+    </a>
+
+    <a href="https://youtu.be/4iz1k03UMtA?si=QDecqyO6D-ZZ08_R" class="work-item" target="_blank">
+      <img src="anexiety.png" alt="ANEXIETY">
+      <h3>ANEXIETY</h3>
+      <p>A PSA about anxiety attacks.</p>
+    </a>
+
+    <a href="https://youtu.be/mbEFYQN02pU?si=n5rYW-DWdDD7o5x5" class="work-item" target="_blank">
+      <img src="dementia.png" alt="About Memory">
+      <h3>About Memory</h3>
+      <p>A dementia PSA.</p>
+    </a>
+  </div>
+</div>
+</div>
+</div>
+
+</div>
+<footer id="footer">
+    <div class="footer-links">
+        <a href="#home">Homepage</a>
+        <a href="#contact">Contact</a>
+    </div>
+</footer>
+</body>
+</html>
